@@ -27,6 +27,7 @@
         
         <service android:name="com.example.servicesexamplesimgur.IntentServiceExample"></service>
         <service android:name="com.example.servicesexamplesimgur.ServiceExample"></service>
+        <service android:name="com.example.servicesexamplesimgur.BoundService"></service>
     </application>
 
 </manifest>

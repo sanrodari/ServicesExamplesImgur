@@ -45,9 +45,14 @@ public class ServiceExample extends Service {
 				} catch (Exception e) {
 					e.printStackTrace();
 					Log.d(Constants.TAG, "Error al tratar de descargar la imagen");
+
+					new Notificator(ServiceExample.this).notificateWithPendindIntent(null, 
+							"Error al descargar la imagen.");
 				}
 			}
 		}).start();
+		
+		stopSelf();
 		
 		return Service.START_NOT_STICKY;
 	}

@@ -45,6 +45,9 @@ public class IntentServiceExample extends IntentService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			Log.d(Constants.TAG, "Error al tratar de descargar la imagen");
+			
+			new Notificator(IntentServiceExample.this).notificateWithPendindIntent(null, 
+					"Error al descargar la imagen.");
 		}
 	}
 
